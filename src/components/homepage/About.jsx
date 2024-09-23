@@ -4,6 +4,7 @@ import profileImg from "/src/assets/images/profile2.webp";
 import { ScrollTrigger } from "gsap/all";
 import { gsap } from "gsap";
 import Heading from "../ui/Heading";
+import ViewCount from "../ui/ViewCount";
 
 export default function About() {
   const profile = useRef(null);
@@ -67,6 +68,7 @@ export default function About() {
               When I`m not developing or debugging, I enjoy trekking to the top of every rock I can find.
              
             </p>
+            <ViewCount/>
           </div>
         </div>
       </div>

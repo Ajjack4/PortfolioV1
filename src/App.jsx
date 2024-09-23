@@ -11,12 +11,34 @@ import Services from "./components/homepage/Services";
 import Works from "./components/homepage/Works";
 import Contact from "./components/homepage/Contact";
 import Footer from "./components/ui/Footer";
+import { doc, getDoc, setDoc, updateDoc, increment } from "firebase/firestore";
+import { db } from "../firebase";
 
 const App = () => {
  
   gsap.registerPlugin(ScrollTrigger);
 
-  const sectionRefs = useRef([]); // Creating a sectionRefs array
+  const sectionRefs = useRef([]); 
+  useEffect(() => {
+    const incrementViewCount = async () => {
+      // Reference to the document where view count is stored
+      const docRef = doc(db, "websiteData", "viewCount");
+
+      // Check if the document exists, if not create it with initial view count
+      const docSnap = await getDoc(docRef);
+      if (!docSnap.exists()) {
+        // Create the document with a default count
+        await setDoc(docRef, { count: 1 });
+      } else {
+        // Update the document and increment the view count
+        await updateDoc(docRef, {
+          count: increment(1),
+        });
+      }
+    };
+
+    incrementViewCount();
+  }, []);
 
   // Scrub animation of section headings
   useEffect(() => {
