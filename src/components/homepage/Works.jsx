@@ -1,4 +1,4 @@
-import messagemate from "/src/assets/images/messagemate.webp";
+import messagemate from "/src/assets/images/messagemate1.webp";
 
 import Projects from "../ui/Projects";
 import Heading from "../ui/Heading";
