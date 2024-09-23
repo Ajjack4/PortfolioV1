@@ -66,7 +66,7 @@ export default function Contact() {
             Have an awesome idea? Let&apos;s bring it to life.
           </h3>
           <p ref={body} className="mt-4 max-w-md 2xl:max-w-2xl text-body-2 2xl:text-4xl text-accent-100 translate-y-10 opacity-0">
-            I am currently not available for freelance work. I am accepting new projects starting from February 2022.
+            I am available for freelance as well as internship opportunities from October 2024.
           </p>
 
           {/* Contact Form */}
@@ -172,7 +172,7 @@ export default function Contact() {
                 </div>
               </a>
               <a
-                href="www.linkedin.com/in/ajinkyajadhav404"
+                href="https://www.linkedin.com/in/ajinkyajadhav404/"
                 className="group group flex w-fit items-center space-x-2"
                 target="_blank"
                 rel="noreferrer"
